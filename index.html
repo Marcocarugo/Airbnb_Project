@@ -1,0 +1,366 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="images/Airbnb_icon-icons.com_66791.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Airbnb</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://kit.fontawesome.com/9a6357afea.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <section class="fixed bg-white w-full">
+    <div class="flex justify-between items-center px-6 h-20 border-b-2">
+      <img src="images/logo.png" class="w-30 h-24 hidden min-[970px]:block" />
+      <img src="images/mini-logo.png" class="h-14 w-10 hidden max-[970px]:block max-[850px]:hidden" />
+      <div class=""></div>
+      <!-- Search Bar for larger screens -->
+      <span class="inline-flex shadow-md border rounded-full h-12 items-center p-2 max-[850px]:hidden">
+        <button class="text-sm font-medium border-r-2 px-4 items-center">Ovunque</button>
+        <button class="text-sm font-medium border-r-2 px-4 items-center">
+          Qualunque Settimana
+        </button>
+        <button class="text-sm font-extralight px-4 items-center">Aggiungi Ospiti</button>
+        <i
+          class="fa-solid fa-magnifying-glass rounded-full p-2 bg-red-500 text-white flex items-center justify-center"></i>
+      </span>
+
+      <!-- Search Bar for smaller screens -->
+      <span class="flex justify-between shadow-md border rounded-full h-12 w-full items-center p-2 min-[850px]:hidden">
+        <button class="text-sm font-medium px-4 flex items-center max-[500px]:text-[9px]">
+          Dove si va?
+          <span class="text-sm font-extralight border-l-2 ml-4 px-4 max-[500px]:text-[9px]">Scegli la tua prossima
+            destinazione</span>
+        </button>
+        <i
+          class="fa-solid fa-magnifying-glass rounded-full p-2 bg-red-500 text-white flex items-center justify-end"></i>
+      </span>
+
+      <!-- Right-Side Options -->
+      <div class="flex items-center gap-6 mr-6 max-[850px]:hidden">
+        <span class="text-sm font-medium">Affitta con Airbnb</span>
+        <i class="fa-solid fa-earth-americas"></i>
+        <div class="flex items-center gap-4 rounded-full border p-4">
+          <i class="fa-solid fa-bars"></i>
+          <i class="fa-solid fa-user"></i>
+        </div>
+      </div>
+    </div>
+
+    <!-- Icons Section -->
+    <div class="fixed overflow-x-scroll bg-white w-full scrollbar-hide">
+      <div class="flex justify-evenly items-center w-[1390px] h-20">
+        <div class="flex flex-col items-center gap-2">
+          <img src="images/Icons/ticket.webp" class="w-6 h-6" />
+          <p class="text-xs font-normal">Icone</p>
+        </div>
+        <div class="flex flex-col items-center gap-2">
+          <img src="images/Icons/holiday.jpg" class="w-6 h-6" />
+          <p class="text-xs font-normal">Sull'acqua</p>
+        </div>
+        <div class="flex flex-col items-center gap-2">
+          <img src="images/Icons/baita.jpg" class="w-6 h-6" />
+          <p class="text-xs font-normal">Baita</p>
+        </div>
+        <div class="flex flex-col items-center gap-2">
+          <img src="images/Icons/grotta.jpg" class="w-6 h-6" />
+          <p class="text-xs font-normal">Grotte</p>
+        </div>
+        <div class="flex flex-col items-center gap-2">
+          <img src="images/Icons/view.jpg" class="w-6 h-6" />
+          <p class="text-xs font-normal">Viste mozzafiato</p>
+        </div>
+        <div class="flex flex-col items-center gap-2">
+          <img src="images/Icons/albero.jpg" class="w-6 h-6" />
+          <p class="text-xs font-normal">Case sull'albero</p>
+        </div>
+        <div class="flex flex-col items-center gap-2">
+          <img src="images/Icons/pool.jpg" class="w-6 h-6" />
+          <p class="text-xs font-normal">Piscine incredibili</p>
+        </div>
+        <div class="flex flex-col items-center gap-2">
+          <img src="images/Icons/wow.jpg" class="w-6 h-6" />
+          <p class="text-xs font-normal">Wow!</p>
+        </div>
+        <div class="flex flex-col items-center gap-2">
+          <img src="images/Icons/agri.jpg" class="w-6 h-6" />
+          <p class="text-xs font-normal">Agriturismi</p>
+        </div>
+        <div class="flex flex-col items-center gap-2">
+          <img src="images/Icons/mini.jpg" class="w-6 h-6" />
+          <p class="text-xs font-normal">Minicase</p>
+        </div>
+        <div class="flex flex-col items-center gap-2">
+          <img src="images/Icons/campagna.jpg" class="w-6 h-6" />
+          <p class="text-xs font-normal">Campagna</p>
+        </div>
+        <div class="flex flex-col items-center gap-2">
+          <img src="images/Icons/barche.jpg" class="w-6 h-6" />
+          <p class="text-xs font-normal">Barche</p>
+        </div>
+        <div class="flex flex-col items-center gap-2">
+          <img src="images/Icons/mulino.jpg" class="w-6 h-6" />
+          <p class="text-xs font-normal">Mulini</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="p-16"></div>
+  <!-- Cards -->
+  <section class="px-8 py-12">
+    <div
+      class="grid grid-cols-1 min-[550px]:grid-cols-2 min-[850px]:grid-cols-3 min-[1130px]:grid-cols-4 row-auto gap-4">
+      <div class="flex flex-col">
+        <img src="images/Cards/Fun.webp" class="rounded-xl object-cover h-62" />
+        <h3 class="font-semibold truncate">Ricordi indelebili con Inside Out 2</h3>
+        <p class="font-light md:text-md sm:text-sm">Host: Joy Loyde</p>
+        <h4 class="font-semibold">0 € per persona</h4>
+      </div>
+      <div class="flex flex-col">
+        <img src="images/Cards/purple.png" class="rounded-xl object-cover h-62" />
+        <h3 class="font-semibold truncate">Soggiorna nella casa di Purple Rain</h3>
+        <p class="font-light md:text-md sm:text-sm">Host: Joy Loyde</p>
+        <h4 class="font-semibold">Disponibile da Agosto</h4>
+      </div>
+      <div class="flex flex-col">
+        <img src="images/Cards/hart.webp" class="rounded-xl object-cover h-62" />
+        <h3 class="font-semibold truncate">Soggiorna nella stanza di Purple Rain</h3>
+        <p class="font-light md:text-md sm:text-sm">Host: Kevin Hart</p>
+        <h4 class="font-semibold">Disponibile da agosto</h4>
+      </div>
+      <div class="flex flex-col">
+        <img src="images/Cards/clipboard.png" class="rounded-xl object-cover h-62" />
+        <h3 class="font-semibold truncate">In salotto con Doja</h3>
+        <p class="font-light md:text-md sm:text-sm">Doja Cat</p>
+        <h4 class="font-semibold">Disponibile da Ottobre</h4>
+      </div>
+      <div class="flex flex-col">
+        <img src="images/Cards/view.png" class="rounded-xl object-cover h-62" />
+        <h3 class="font-semibold truncate">Inaugura i giochi olimpici al Museo D'arte</h3>
+        <p class="font-light md:text-md sm:text-sm">Host: Mathieu Lemanne</p>
+        <h4 class="font-semibold">Disponibile a Maggio</h4>
+      </div>
+      <div class="flex flex-col">
+        <img src="images/Cards/alien.png" class="rounded-xl object-cover h-62" />
+        <h3 class="font-semibold truncate">Allenati con la X-Mason</h3>
+        <p class="font-light md:text-md sm:text-sm">Host: Jubilee</p>
+        <h4 class="font-semibold">Non disponibile</h4>
+      </div>
+      <div class="flex flex-col">
+        <img src="images/Cards/time.png" class="rounded-xl object-cover h-62" />
+        <h3 class="font-semibold truncate">Svegliati nel Museo dell'Orsay</h3>
+        <p class="font-light md:text-md sm:text-sm">Host: Mathieu Lemanne</p>
+        <h4 class="font-semibold">Non disponibile</h4>
+      </div>
+      <div class="flex flex-col">
+        <img src="images/Cards/room.png" class="rounded-xl object-cover h-62" />
+        <h3 class="font-semibold truncate">Progetta la tua super tuta</h3>
+        <p class="font-light md:text-md sm:text-sm">Host: Edna Mode</p>
+        <h4 class="font-semibold">Non disponibile</h4>
+      </div>
+      <div class="flex flex-col">
+        <img src="images/Cards/Mason.png" class="rounded-xl object-cover h-62" />
+        <h3 class="font-semibold truncate">Soggiorna nella X-Mason</h3>
+        <p class="font-light md:text-md sm:text-sm">Host: Jubilee</p>
+        <h4 class="font-semibold">Disponibile a Luglio</h4>
+      </div>
+    </div>
+    <h1 class="text-3xl font-semibold pt-12 pb-8">Esperienze passate</h1>
+    <div
+      class="grid grid-cols-1 min-[550px]:grid-cols-2 min-[850px]:grid-cols-3 min-[1130px]:grid-cols-4 row-auto gap-4">
+      <div class="flex flex-col">
+        <img src="images/Cards/ferrari.png" class="rounded-xl object-cover h-62" />
+        <h3 class="font-semibold truncate">Passa la notte nel Museo errari</h3>
+        <p class="font-light md:text-md sm:text-sm">Host: Marc Gené</p>
+        <h4 class="font-semibold">Non disponibile</h4>
+      </div>
+      <div class="flex flex-col">
+        <img src="images/Cards/shrek.png" class="rounded-xl object-cover h-62" />
+        <h3 class="font-semibold truncate">La palude di Shrek</h3>
+        <p class="font-light md:text-md sm:text-sm">Host: Donkey</p>
+        <h4 class="font-semibold">Non disponibile</h4>
+      </div>
+      <div class="flex flex-col">
+        <img src="images/Cards/barbie.png" class="rounded-xl object-cover h-62" />
+        <h3 class="font-semibold truncate">Malibu Dreamhouse di Barbie</h3>
+        <p class="font-light md:text-md sm:text-sm">Host: Ken</p>
+        <h4 class="font-semibold">Non disponibile</h4>
+      </div>
+      <div class="flex flex-col">
+        <img src="images/Cards/lasso.png" class="rounded-xl object-cover h-62" />
+        <h3 class="font-semibold truncate">Il pub preferito di Ted Lasso</h3>
+        <p class="font-light md:text-md sm:text-sm">Host: Mae</p>
+        <h4 class="font-semibold">Non disponibile</h4>
+      </div>
+      <div class="flex flex-col">
+        <img src="images/Cards/hide.png" class="rounded-xl object-cover h-62" />
+        <h3 class="font-semibold truncate">Rifugio sulle piante d'appartamento</h3>
+        <p class="font-light md:text-md sm:text-sm">Host: Seth Rogen</p>
+        <h4 class="font-semibold">Non disponibile</h4>
+      </div>
+      <div class="flex flex-col">
+        <img src="images/Cards/villa.png" class="rounded-xl object-cover h-62" />
+        <h3 class="font-semibold truncate">Natale a casa McCallister</h3>
+        <p class="font-light md:text-md sm:text-sm">Host: Buzz</p>
+        <h4 class="font-semibold">Non disponibile</h4>
+      </div>
+    </div>
+  </section>
+  <!-- Upper Footer -->
+  <section class="px-8 py-4 bg-gray-100 overflow-x-hidden">
+    <div class="flex flex-col space-y-6 border-b-2 py-2 overflow-x-scroll">
+      <h1 class="text-xl font-semibold">Ispirazione per viaggi futuri</h1>
+      <div class="overflow-x-scroll footer">
+        <div class="flex justify-start space-x-5 w-[540px]">
+          <button class="text-sm font-normal">Popolari</button>
+          <button class="text-sm font-normal">Sul litorale</button>
+          <button class="text-sm font-normal">Destinazioni storiche</button>
+          <button class="text-sm font-normal">Isole</button>
+          <button class="text-sm font-normal">Montagne</button>
+          <button class="text-sm font-normal">Categorie</button>
+        </div>
+      </div>
+    </div>
+    <div class="grid-cols-6 grid gap-y-8 py-8 border-b-2 max-[850px]:grid-cols-2 max-[1130px]:grid-cols-3">
+      <div class="flex flex-col">
+        <p class="text-sm font-semibold">Acireale</p>
+        <p class="text-sm font-light">Soggiorni in appartamenti</p>
+      </div>
+      <div class="flex flex-col">
+        <p class="text-sm font-semibold">Amsterdam</p>
+        <p class="text-sm font-light">Soggiorni in ville</p>
+      </div>
+      <div class="flex flex-col">
+        <p class="text-sm font-semibold">Arezzo</p>
+        <p class="text-sm font-light">Soggiorni in case</p>
+      </div>
+      <div class="flex flex-col">
+        <p class="text-sm font-semibold">Assisi</p>
+        <p class="text-sm font-light">Soggiorni in appartamenti</p>
+      </div>
+      <div class="flex flex-col">
+        <p class="text-sm font-semibold">Barcellona</p>
+        <p class="text-sm font-light">Case vacanza</p>
+      </div>
+      <div class="flex flex-col">
+        <p class="text-sm font-semibold">Bologna</p>
+        <p class="text-sm font-light">Soggiorni in case</p>
+      </div>
+      <div class="flex flex-col">
+        <p class="text-sm font-semibold">Catania</p>
+        <p class="text-sm font-light">Soggiorni in chalet</p>
+      </div>
+      <div class="flex flex-col">
+        <p class="text-sm font-semibold">Chia</p>
+        <p class="text-sm font-light">Case vacanze</p>
+      </div>
+      <div class="flex-col hidden md:flex">
+        <p class="text-sm font-semibold">Firenze</p>
+        <p class="text-sm font-light">Soggiorni in ville</p>
+      </div>
+      <div class="flex-col hidden md:flex">
+        <p class="text-sm font-semibold">Giulianova</p>
+        <p class="text-sm font-light">Case vacanze</p>
+      </div>
+      <div class="flex-col hidden md:flex">
+        <p class="text-sm font-semibold">Livorno</p>
+        <p class="text-sm font-light">Soggiorno in case</p>
+      </div>
+      <div class="flex-col hidden md:flex">
+        <p class="text-sm font-semibold">Londra</p>
+        <p class="text-sm font-light">Soggiorni in ville</p>
+      </div>
+      <div class="flex-col hidden md:flex">
+        <p class="text-sm font-semibold">Los Angeles</p>
+        <p class="text-sm font-light">Soggiorni in ville</p>
+      </div>
+      <div class="flex-col hidden md:flex">
+        <p class="text-sm font-semibold">Madonna di Campiglio</p>
+        <p class="text-sm font-light">Soggiorni in appartamenti</p>
+      </div>
+      <div class="flex-col hidden md:flex">
+        <p class="text-sm font-semibold">Marcelli</p>
+        <p class="text-sm font-light">Soggiorni in case</p>
+      </div>
+      <div class="flex-col hidden md:flex">
+        <p class="text-sm font-semibold">Marotta</p>
+        <p class="text-sm font-light">Soggiorni in appartamenti</p>
+      </div>
+      <div class="flex-col hidden md:flex">
+        <p class="text-sm font-semibold">Cervinia</p>
+        <p class="text-sm font-light">Soggiorni in montagna</p>
+      </div>
+      <div class="flex-col hidden md:flex">
+        <p class="text-sm font-semibold">Milano</p>
+        <p class="text-sm font-light">Soggiorni in appartamenti</p>
+      </div>
+    </div>
+    <!--  Lower Footer -->
+    <div class="grid-cols-3 grid py-8 max-[950px]:grid-cols-1 max-[950px]:gap-y-8 border-b-2">
+      <div class="flex flex-col gap-y-4 pb-6 max-[950px]:border-b-2">
+        <p class="text-sm font-semibold">Assistenza</p>
+        <p class="text-sm font-normal text-gray-700">Centro assistenza</p>
+        <p class="text-sm font-normal text-gray-700">Aircover</p>
+        <p class="text-sm font-normal text-gray-700">Antidiscriminazione</p>
+        <p class="text-sm font-normal text-gray-700">Opzioni di cancellazione</p>
+        <p class="text-sm font-normal text-gray-700">Segnalazioni nel quartiere</p>
+      </div>
+      <div class="flex flex-col gap-y-4 pb-6 max-[950px]:border-b-2">
+        <p class="text-sm font-semibold">Ospitare</p>
+        <p class="text-sm font-normal text-gray-700">Apri un Airbnb</p>
+        <p class="text-sm font-normal text-gray-700">Aircover per gli ospiti</p>
+        <p class="text-sm font-normal text-gray-700">Risorse per gli host</p>
+        <p class="text-sm font-normal text-gray-700">Forum della community</p>
+        <p class="text-sm font-normal text-gray-700">Ospitare responsabilità</p>
+      </div>
+      <div class="flex flex-col gap-y-4 max-[950px]:grid-cols-1">
+        <p class="text-sm font-semibold">Airbnb</p>
+        <p class="text-sm font-normal text-gray-700">Newsroom</p>
+        <p class="text-sm font-normal text-gray-700">Nuove funzionalità</p>
+        <p class="text-sm font-normal text-gray-700">Opportunità di lavoro</p>
+        <p class="text-sm font-normal text-gray-700">Investitori</p>
+        <p class="text-sm font-normal text-gray-700">Soggiorni con Airbnb</p>
+      </div>
+    </div>
+    <!-- Infomations -->
+    <div class="justify-between py-4 hidden min-[650px]:flex">
+      <div class="flex">
+        <span class="text-sm font-extralight mr-2">2024 Airbnb Inc</span>
+        <span class="text-sm font-extralight mr-2">Privacy</span>
+        <span class="text-sm font-extralight mr-2">Termini</span>
+        <span class="text-sm font-extralight mr-2">Mappa del sito</span>
+      </div>
+      <div class="flex items-center">
+        <i class="fa-solid fa-earth-americas mr-4"></i>
+        <span class="text-sm font-semibold mr-4">Italiano (IT)</span>
+        <span class="text-sm font-semibold mr-4">€ EUR</span>
+        <i class="fa-brands fa-square-facebook mr-4"></i>
+        <i class="fa-brands fa-twitter mr-4"></i>
+        <i class="fa-brands fa-square-instagram"></i>
+      </div>
+    </div>
+    <!-- Informations for lower screen -->
+    <div class="flex flex-col min-[650px]:hidden">
+      <div class="flex justify-center py-4">
+        <span class="text-sm font-semibold mr-4">Italiano (IT)</span>
+        <span class="text-sm font-semibold mr-4">€ EUR</span>
+        <i class="fa-brands fa-square-facebook mr-4"></i>
+        <i class="fa-brands fa-twitter mr-4"></i>
+        <i class="fa-brands fa-square-instagram"></i>
+      </div>
+      <div class="flex justify-center">
+        <span class="text-sm font-extralight mr-2">2024 Airbnb Inc</span>
+        <span class="text-sm font-extralight mr-2">Privacy</span>
+        <span class="text-sm font-extralight mr-2">Termini</span>
+        <span class="text-sm font-extralight mr-2">Mappa del sito</span>
+      </div>
+    </div>
+  </section>
+</body>
+
+</html>
